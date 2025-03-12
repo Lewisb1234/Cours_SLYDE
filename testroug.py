@@ -13,7 +13,7 @@ df["districtofresidence"] = df["districtofresidence"].str.strip().str.upper()
 # Convertir les dates
 df["dateofonset"] = pd.to_datetime(df["dateofonset"], errors='coerce')
 
-# Supprimer les lignes avec des dates invalides
+# Supprimer les lignes avec des dates
 df = df.dropna(subset=["dateofonset"])
 
 # Vérifier les doublons
